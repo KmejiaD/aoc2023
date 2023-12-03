@@ -31,11 +31,9 @@ def part2():
     total = 0
     for line in lines:
         match = re.search(regex, line).group()
-        lineReversed = line[::-1]
-        match2 = re.search(regexReverse,lineReversed).group()
+        match2 = re.search(regexReverse,line[::-1]).group()
         total += numbers.get(match) * 10
         total += numbersR.get(match2)
-
     print('solution Part 2', total)
 
 
